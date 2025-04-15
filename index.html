@@ -3,377 +3,343 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prakash Chaulagain - Game & Full Stack Developer</title>
+    <meta name="description" content="Prakash Chaulagain, a skilled Full Stack Developer and Game Developer from Nepal, specializing in web development, game design, and graphic design. Explore my projects and contact me for collaborations.">
+    <meta name="keywords" content="Prakash Chaulagain, Full Stack Developer, Game Developer, Web Developer, Graphic Designer, Nepal, Portfolio, Hire Developer">
+    <meta name="author" content="Prakash Chaulagain">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Prakash Chaulagain - Full Stack & Game Developer Portfolio">
+    <meta property="og:description" content="Discover the portfolio of Prakash Chaulagain, a Full Stack Developer and Game Developer from Nepal, showcasing innovative web and game projects.">
+    <meta property="og:image" content="https://yourdomain.com/assets/me.jpg">
+    <meta property="og:url" content="https://yourdomain.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Prakash Chaulagain - Full Stack & Game Developer</title>
     <link rel="icon" href="me.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* General Reset */
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
         body {
-            background-color: #fff3e0;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9fafb;
+            color: #1f2937;
+            scroll-behavior: smooth;
         }
-        .container {
-            width: 100%;
-            max-width: 1200px;
+        .navbar {
+            transition: background-color 0.3s ease;
         }
-        .header {
-            background: linear-gradient(90deg, #ff5722, #ff9800);
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        .logo {
-            font-size: 1.8em;
-            font-weight: bold;
-            color: #fff;
-        }
-        .lnk a {
-            color: #fff;
-            text-decoration: none;
-            margin-left: 20px;
-            font-size: 1.1em;
-            font-weight: 500;
-        }
-        .lnk a:hover {
-            color: #ffe0b2;
-        }
-        .body {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 40px;
-            background-color: #ffffff;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        .col1, .col2 {
-            width: 100%;
-            margin-bottom: 0; /* Removed margin for seamless sections */
-        }
-        .intro {
-            font-size: 2.5em;
-            line-height: 1.2;
-            color: #ff5722;
-        }
-        .intro strong {
-            color: #ff9800;
-        }
-        .discription {
-            margin-top: 20px;
-            line-height: 1.5;
-            color: #475569;
-        }
-        .hiremebtn {
-            display: inline-block;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            background-color: #ff5722;
-            color: white;
-            padding: 10px 25px;
-            font-weight: bold;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-        .hiremebtn:hover {
-            background-color: #ff9800;
-        }
-        .col2 img {
-            width: 100%;
-            max-width: 300px;
-            border: 5px solid #ff5722;
-            border-radius: 50%;
-        }
-        #about {
-            display: flex; /* Enables flexbox layout */
-            justify-content: space-between; /* Space between columns */
-            margin: 0; /* Removed margin to eliminate spacing */
-            padding: 40px;
-            background-color: #ffecb3;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        .col3 {
-            width: 45%; /* Width for the about column */
-            margin-right: 5%; /* Space between columns */
-            display: flex;
-            flex-direction: column;
-        }
-        .col4 {
-            width: 55%; /* Width for the skills column */
-            display: flex;
-            flex-direction: column; /* Column layout for skills */
-            margin-left: 0; /* Reset left margin */
-        }
-        h3 {
-            margin-bottom: 4%;
-         /* Underline for section titles */
-        }
-        .progress {
-            display: flex; /* Aligns items horizontally */
-            flex-direction: column; /* Row layout for progress bars */
-            justify-content: space-between; /* Space between progress bar and percentage */
-            margin: 0 0 20px 0; /* Bottom margin for spacing */
-        }
-        .skill {
-            width: 98%; /* Full width for skill bar */
-            height: 10px; /* Height for the skill bar */
-            border: solid 1px black; /* Border for skill bar */
-            border-radius: 20px; /* Rounded corners for skill bar */
-            margin: 0 20px 5% 0; /* Margin for spacing */
-        }
-        .html {
-            height: 100%; /* Full height for skill */
-            width: 95%; /* Width of the skill bar */
-            background-color: orange; /* Skill color */
-            border-radius: 20px; /* Rounded corners for skill fill */
-        }
-        .php {
-            height: 100%; /* Full height for skill */
-            width: 78%; /* Width of the skill bar */
-            background-color: rgb(200, 0, 255); /* Skill color */
-            border-radius: 20px; /* Rounded corners for skill fill */
-        }
-        .py {
-            height: 100%; /* Full height for skill */
-            width: 84%; /* Width of the skill bar */
-            background-color: rgb(0, 200, 255); /* Skill color */
-            border-radius: 20px; /* Rounded corners for skill fill */
-        }
-        #contact {
-            margin: 0; /* Removed margin to eliminate spacing */
-            padding: 40px;
-            background-color: #ffecb3;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        #contact h2 {
-            color: #ff5722;
-            font-size: 1.8em;
-            margin-bottom: 20px;
-        }
-        .col5, .col6 {
-            margin-bottom: 0; /* Removed margin for seamless sections */
-        }
-        .col6{
-            display:flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .col6 .contact-links{
-            height:45%;
-        }
-        .contact-links {
-            display: flex;
-            flex-direction: column;
-        }
-        .contact-links a {
-            color: #ff5722;
-            text-decoration: none;
-            font-size: 1.3em;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            transition: color 0.3s;
-        }
-        .contact-links a:hover {
-            color: #ff9800;
-        }
-        .contact-links a i {
-            margin-right: 10px;
-        }
-        .footer {
-            text-align: center;
-            padding: 20px;
-            color: #6b7280;
-            font-size: 0.9em;
+        .navbar.scrolled {
             background-color: #1f2937;
-            color: #cbd5e1;
-            width: 100%;
-            position: relative;
         }
-        .col5 .hiremebtn{
-            border:none;
+        .hero {
+            background: linear-gradient(135deg, #ff5722, #ff9800);
+            padding-top: 5rem; /* Added to prevent overlap with fixed navbar */
+        }
+        .project-card, .skill-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover, .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form input, .contact-form textarea {
+            transition: border-color 0.3s ease;
+        }
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #ff5722;
             outline: none;
         }
-        #work {
-            border-right: 2px solid black; /* Cursor effect */
-            white-space: nowrap; /* Prevents the text from wrapping */
-            overflow: hidden; /* Hides the text while typing */
-            display: inline-block; /* Allows for smoother animations */
-            transition: opacity 0.5s ease; /* Smooth transition for opacity */
-            padding-right: 8px;
+        .skill-progress {
+            height: 10px;
+            border-radius: 20px;
+            background-color: #e5e7eb;
+            overflow: hidden;
         }
-        /* Input Fields Styles */
-        input[type="text"],
-        input[type="email"],
-        textarea {
-            width: 100%; /* Full width of the container */
-            padding: 12px; /* Adjusted padding for height */
-            margin-top: 8px; /* Margin above the input */
-            border: 1px solid #ccc; /* Standard border */
-            border-radius: 4px; /* Slightly rounded corners for input fields */
-            font-size: 1em; /* Font size */
+        .skill-progress div {
+            height: 100%;
+            border-radius: 20px;
+            transition: width 1s ease-in-out;
         }
-
-        textarea {
-            height: 100px; /* Fixed height for the textarea */
-            resize: none; /* Disable resizing */
+        .btn-primary {
+            background-color: #ff5722;
+            color: #ffffff;
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 9999px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
-
-        /* Responsive Styles */
-        @media (min-width: 768px) {
-            .body {
-                flex-direction: row;
-                justify-content: space-between;
+        .btn-primary:hover {
+            background-color: #e64a19;
+            color: #ffffff;
+            transform: scale(1.05);
+        }
+        .btn-primary:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255, 87, 34, 0.3);
+        }
+        /* Custom responsive adjustments */
+        @media (max-width: 640px) {
+            .navbar .space-x-6 {
+                display: none;
             }
-            .col1, .col2 {
-                width: 45%;
+            .navbar .mobile-menu {
+                display: block;
             }
-            #contact {
-                display: flex;
-                justify-content: space-between;
+            .hero {
+                height: auto;
+                padding: 6rem 1rem;
             }
-            .hiremebtn {
-                margin-bottom: 4%;
+            .hero h1 {
+                font-size: 2.25rem; /* Reduced for better mobile fit */
+                line-height: 2.5rem;
             }
-            .col5 {
-                width: 68%;
+            .hero .subtitle {
+                font-size: 1rem; /* Smaller font for subtitle */
+                line-height: 1.5rem;
+                margin-bottom: 1rem;
             }
-            .col6 {
-                width: 28%;
+            .hero .description {
+                font-size: 0.875rem; /* Smaller for description */
+                line-height: 1.25rem;
+                max-width: 90%; /* Prevent text from touching edges */
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .project-card img, .skill-card {
+                height: auto;
+            }
+            .contact-form {
+                max-width: 100%;
+            }
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+        @media (min-width: 641px) {
+            .mobile-menu {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 3.75rem; /* Larger for desktop */
+            }
+            .hero .subtitle {
+                font-size: 1.5rem;
+            }
+            .hero .description {
+                font-size: 1.25rem;
             }
         }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h4 class="logo">P.</h4>
-            <div class="lnk">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
+    <!-- Navbar -->
+    <nav class="navbar fixed w-full py-4 px-6 bg-transparent text-white z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold">Prakash Chaulagain</a>
+            <div class="space-x-6 hidden sm:flex">
+                <a href="#home" class="hover:text-orange-300">Home</a>
+                <a href="#about" class="hover:text-orange-300">About</a>
+                <a href="#skills" class="hover:text-orange-300">Skills</a>
+                <a href="#projects" class="hover:text-orange-300">Projects</a>
+                <a href="#contact" class="hover:text-orange-300">Contact</a>
             </div>
+            <button class="mobile-menu sm:hidden text-2xl" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
-
-        <div id="home" class="body">
-            <div class="col1">
-                <div class="intro">
-                    Hello, I'm <strong>Prakash</strong>, a<br><strong id="work">Full Stack Developer</strong> <br>from Nepal
-                </div>
-                <p class="discription">Specializing in web and game development, I create functional and visually captivating applications that help businesses succeed.</p>
-                <a href="mailto:christianprakash033@outlook.in" class="hiremebtn">Hire Me</a>
-            </div>
-            <div class="col2">
-                <img src="me.jpg" alt="Prakash Chaulagain" class="myimg">
-            </div>
+        <div class="mobile-menu-content hidden sm:hidden bg-gray-800 w-full absolute top-16 left-0 flex flex-col items-center py-4">
+            <a href="#home" class="py-2 text-white hover:text-orange-300">Home</a>
+            <a href="#about" class="py-2 text-white hover:text-orange-300">About</a>
+            <a href="#skills" class="py-2 text-white hover:text-orange-300">Skills</a>
+            <a href="#projects" class="py-2 text-white hover:text-orange-300">Projects</a>
+            <a href="#contact" class="py-2 text-white hover:text-orange-300">Contact</a>
         </div>
+    </nav>
 
-        <div id="about">
-            <div class="col3">
-                <h3>About Me</h3>
-                <p>Hello, My name is Prakash Chaulagain.I am a passionate developer and designer skilled in modern web technologies and game engines, aiming to deliver seamless and powerful user experiences.Once give me a chance to show you my talent.</p>
-            </div>
-            <div class="col4">
-                <h3>Skills</h3>
-                <div class="progress">
-                    <p>HTML/CSS/JavaScript (95%)</p>
-                    <div class="skill "><div class="html"></div></div>
-                </div>
-                <div class="progress">
-                    <p>PHP (78%)</p>
-                    <div class="skill"><div class="php"></div></div>
-                </div>
-                <div class="progress">
-                    <p>Python (84%)</p>
-                    <div class="skill "><div class="py"></div></div>
-                </div>
-            </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero flex items-center justify-center text-white min-h-screen">
+        <div class="text-center px-4">
+            <h1 class="font-bold mb-4">Hi, I'm Prakash Chaulagain</h1>
+            <p class="subtitle mb-6">Full Stack Developer | Game Developer | Graphic Designer</p>
+            <p class="description mb-8">Crafting innovative web and game solutions with a passion for visual creativity.</p>
+            <a href="#projects" class="btn-primary">View My Work</a>
         </div>
+    </section>
 
-        <div id="contact">
-            <div class="col5">
-                <h2>Contact Me</h2>
-                <form method="post" action="" name="contact-form">
-                    <label>Name</label><br>
-                    <input type="text" name="name" placeholder="Your Name" required><br>
-                    <label>Email</label><br>
-                    <input type="email" name="email" placeholder="Your Email" required><br>
-                    <label>Message</label><br>
-                    <textarea name="message" placeholder="Write your message" required></textarea><br>
-                    <button type="submit" class="hiremebtn">Send Message</button>
-                </form>
-            </div>
-            <div class="col6">
-                <h2>Get in Touch</h2>
-                <div class="contact-links">
-                    <a href="https://facebook.com/@p4prakash033" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
-                    <a href="https://x.com/p4prakash033?s=9" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
-                    <a href="https://youtube.com/@BitBandiCoot" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-6 md:mb-0">
+                    <img src="me.jpg" alt="Prakash Chaulagain" class="rounded-lg shadow-lg max-w-full h-auto">
+                </div>
+                <div class="md:w-1/2 md:pl-10">
+                    <p class="text-lg mb-4">I'm Prakash Chaulagain, a passionate Full Stack Developer and Game Developer from Nepal with a knack for creating seamless, user-focused applications. With expertise in modern web technologies and game engines, I strive to deliver impactful solutions that drive business success.</p>
+                    <p class="text-lg mb-4">My journey in tech is fueled by curiosity and a commitment to excellence, whether I'm coding responsive websites, designing stunning graphics, or building immersive 2D games. Let's collaborate to bring your ideas to life!</p>
+                    <a href="assets/resume.pdf" class="text-orange-600 font-semibold hover:underline" download>Download My Resume</a>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="footer">
-            <p>© 2024 Prakash Chaulagain. All rights reserved.</p>
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">My Skills</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <div class="skill-card bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-semibold mb-2">HTML/CSS/JavaScript</h3>
+                    <div class="skill-progress"><div class="bg-red-500" style="width: 95%;"></div></div>
+                    <p class="text-gray-600 mt-2">Expert in building responsive, accessible websites with modern frameworks.</p>
+                </div>
+                <div class="skill-card bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-semibold mb-2">PHP</h3>
+                    <div class="skill-progress"><div class="bg-purple-500" style="width: 78%;"></div></div>
+                    <p class="text-gray-600 mt-2">Proficient in server-side development and dynamic web applications.</p>
+                </div>
+                <div class="skill-card bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-semibold mb-2">Python</h3>
+                    <div class="skill-progress"><div class="bg-blue-500" style="width: 84%;"></div></div>
+                    <p class="text-gray-600 mt-2">Skilled in scripting, automation, and game development with Python.</p>
+                </div>
+                <div class="skill-card bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-semibold mb-2">Graphic Design</h3>
+                    <div class="skill-progress"><div class="bg-green-500" style="width: 90%;"></div></div>
+                    <p class="text-gray-600 mt-2">Creating visually stunning designs for digital and print media.</p>
+                </div>
+            </div>
         </div>
-    </div>
-</body>
-<script>
-    var work = document.getElementById('work');
-    var works = ['Full Stack Developer', '2D Game Developer', 'UI/UX Designer'];
-    var currentIndex = 0;
-    var typingSpeed = 100; // Speed of typing
-    var erasingSpeed = 50; // Speed of erasing
-    var pauseBetween = 1500; // Pause before switching jobs
-    var currentJob = '';
-    var isTyping = true; // State to check if we are typing or erasing
+    </section>
 
-    function type() {
-        if (isTyping) {
-            currentJob += works[currentIndex].charAt(currentJob.length);
-            work.innerHTML = currentJob;
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">My Projects</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="project-card bg-gray-100 rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://via.placeholder.com/600x400" alt="Web Application" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Web Application</h3>
+                        <p class="text-gray-600 mb-4">Developed a responsive web app using React and PHP, enhancing user engagement by 30%.</p>
+                        <a href="https://github.com/p4prakash033/web-app" class="text-orange-600 font-semibold hover:underline">View on GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card bg-gray-100 rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://via.placeholder.com/600x400" alt="2D Game" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">2D Adventure Game</h3>
+                        <p class="text-gray-600 mb-4">Created an immersive game using Unity and Python, featured on indie platforms.</p>
+                        <a href="https://github.com/p4prakash033/game-project" class="text-orange-600 font-semibold hover:underline">View on GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card bg-gray-100 rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://via.placeholder.com/600x400" alt="Graphic Design Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Graphic Design Project</h3>
+                        <p class="text-gray-600 mb-4">Designed branding materials for a startup, improving brand recognition by 25%.</p>
+                        <a href="https://github.com/p4prakash033/graphic-design-project" class="text-orange-600 font-semibold hover:underline">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            if (currentJob.length === works[currentIndex].length) {
-                isTyping = false;
-                setTimeout(() => {
-                    currentJob = '';
-                    currentIndex = (currentIndex + 1) % works.length; // Move to the next job
-                    isTyping = true;
-                }, pauseBetween);
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Get in Touch</h2>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2">
+                    <form class="contact-form max-w-lg mx-auto" name="contact-form">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 mb-2">Name</label>
+                            <input type="text" id="name" name="name" class="w-full p-3 border rounded-lg" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full p-3 border rounded-lg" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 mb-2">Message</label>
+                            <textarea id="message" name="message" class="w-full p-3 border rounded-lg h-32" placeholder="Write your message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full">Send Message</button>
+                    </form>
+                </div>
+                <div class="md:w-1/2 flex flex-col justify-center">
+                    <h3 class="text-2xl font-semibold mb-4">Connect with Me</h3>
+                    <div class="contact-links">
+                        <a href="https://facebook.com/@p4prakash033" target="_blank" class="flex items-center text-orange-600 hover:text-orange-800 mb-4">
+                            <i class="fab fa-facebook fa-lg mr-2"></i> Facebook
+                        </a>
+                        <a href="https://x.com/p4prakash033?s=9" target="_blank" class="flex items-center text-orange-600 hover:text-orange-800 mb-4">
+                            <i class="fab fa-twitter fa-lg mr-2"></i> Twitter
+                        </a>
+                        <a href="https://youtube.com/@TensorScript" target="_blank" class="flex items-center text-orange-600 hover:text-orange-800 mb-4">
+                            <i class="fab fa-youtube fa-lg mr-2"></i> YouTube
+                        </a>
+                        <a href="mailto:christianprakash033@outlook.in" class="flex items-center text-orange-600 hover:text-orange-800">
+                            <i class="fas fa-envelope fa-lg mr-2"></i> christianprakash033@outlook.in
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 bg-gray-800 text-white text-center">
+        <p>© 2025 Prakash Chaulagain. All rights reserved.</p>
+        <div class="mt-4 flex justify-center footer-links">
+            <a href="https://facebook.com/@p4prakash033" class="mx-2 hover:text-orange-300">Facebook</a>
+            <a href="https://x.com/p4prakash033?s=9" class="mx-2 hover:text-orange-300">Twitter</a>
+            <a href="https://youtube.com/@TensorScript" class="mx-2 hover:text-orange-300">YouTube</a>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
             }
-        }
-        setTimeout(type, isTyping ? typingSpeed : erasingSpeed);
-    }
+        });
 
-    // Start the typing animation
-    type();
+        // Smooth scrolling for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
 
-//------------------contact form -------------------------
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwHi-FPveLFPcf7CfW8Tk_LK8RHLgmcywtj782n458pTpOyhHPxr-1LcAQuPVrILrZv/exec'
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu');
+        const mobileMenuContent = document.querySelector('.mobile-menu-content');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenuContent.classList.toggle('hidden');
+        });
 
-
-const form = document.forms['contact-form']
-
-
-form.addEventListener('submit', e => {
-  e.preventDefault()
-  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-  .then(response => alert("Thank you! your form is submitted successfully." ))
-  .then(() => { window.location.reload(); })
-  .catch(error => console.error('Error!', error.message))
-})
-
-
-</script>
+        // Contact form submission
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwHi-FPveLFPcf7CfW8Tk_LK8RHLgmcywtj782n458pTpOyhHPxr-1LcAQuPVrILrZv/exec';
+        const form = document.forms['contact-form'];
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    alert('Thank you! Your message has been sent successfully.');
+                    form.reset();
+                })
+                .catch(error => console.error('Error!', error.message));
+        });
+    </script>
+</body>
 </html>
